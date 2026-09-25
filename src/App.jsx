@@ -12,7 +12,7 @@ import Searchpage from './components/pages/Searchpage';
 import ShopePage from './components/pages/ShopePage';
 import Contact from './components/pages/Contact';
 import Login from '../src/components/pages/Login';
-import CartPage from './components/cart/CheckoutPage';
+import CartPage from './components/cart/CartPage';
 import CheckoutPage from './components/cart/CheckoutPage';
 import SingleProduct from './components/shop/ProductDetails/SingleProduct';
 import ForgotPassword from './components/password/ForgotPassword';
