@@ -38,7 +38,7 @@ import ManageJobs from './components/pages/dashboard/admin/jobs/ManageJobs';
 import CareerPage from './components/pages/dashboard/admin/jobs/CareerPage';
 import CookieConsent from './components/pages/CookieConsent';
 import ProductCategoryPage from "./components/pages/ProductCategoryPage";
-import useOnlineCount from './components/pages/useOnlineCount';
+
 import VisitorAnalytics from './components/pages/dashboard/admin/VisitorAnalytics';
 import AdminHeroSlides from '../src/components/pages/dashboard/admin/AdminHeroSlides';
 import PressManagement from '../src/components/pages/PressManagement';
@@ -62,19 +62,11 @@ const GenericPage = () => (
 );
 
 function App() {
-  const onlineCount = useOnlineCount();
-  const prevOnlineRef = useRef(onlineCount);
+  
+  
 
   // 🔔 Notify whenever the online count changes (any user, any page)
-  useEffect(() => {
-    if (prevOnlineRef.current !== onlineCount) {
-      toast(`🟢 ${onlineCount} user${onlineCount === 1 ? '' : 's'} online`, {
-        id: 'online-count', // reuses the same toast slot instead of stacking
-        duration: 2000,
-      });
-      prevOnlineRef.current = onlineCount;
-    }
-  }, [onlineCount]);
+  
 
   return (
     <main className="app-shell flex flex-col min-h-screen">
